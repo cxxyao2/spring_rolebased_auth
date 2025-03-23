@@ -38,7 +38,7 @@ public class MysqlSecurityRoleApplication {
                     .lastname("Manager")
                     .email("manager@admin.com")
                     .password("password")
-                    .role(Role.USER)
+                    .role(Role.MANAGER)
                     .build();
             System.out.println("Manager accesstoken: " + service.register(manager).getAccessToken());
         };

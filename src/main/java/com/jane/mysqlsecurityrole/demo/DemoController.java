@@ -5,29 +5,28 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("admin")
-public class AdminController {
+@RequestMapping("demo")
+public class DemoController {
 
     @GetMapping
+//    @PreAuthorize("hasRole('ADMIN')")
     public String get(Authentication authentication) {
-        System.out.println("Hello, authenticating...");
-        System.out.println(authentication);
-        return "GET::admin controller";
+        return "GET::Demo controller";
     }
 
     @PostMapping
     public String post() {
-        return "POST::admin controller";
+        return "POST::Demo controller";
     }
 
     @PutMapping
     public String put() {
-        return "PUT::admin controller";
+        return "PUT::Demo controller";
     }
 
     @DeleteMapping
     public String delete() {
-        return "DELETE::admin controller";
+        return "DELETE::Demo controller";
     }
 
 

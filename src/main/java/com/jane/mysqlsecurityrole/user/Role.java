@@ -14,6 +14,7 @@ import static com.jane.mysqlsecurityrole.user.Permission.*;
 @RequiredArgsConstructor
 public enum Role {
     USER(Collections.emptySet()),
+    ONLY_READ(Set.of(ADMIN_READ,MANAGER_READ)),
     ADMIN(
             Set.of(
                     ADMIN_DELETE,
@@ -31,7 +32,8 @@ public enum Role {
                     MANAGER_CREATE,
                     MANAGER_DELETE,
                     MANAGER_UPDATE,
-                    MANAGER_READ
+                    MANAGER_READ,
+                    ADMIN_READ
             )
     )
     ;
